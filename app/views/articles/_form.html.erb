@@ -1,0 +1,15 @@
+<%= form_with model: @article do |form|%>
+<% if article.errors.any? %>
+    <h2><%= pluralize(article.errors.count, "error")%> prevented article from being saved </h2>
+<ul>   
+    <% article.errors.each do |error|%>
+<li><%= error.full_message %></li>
+    <% end %>
+<% end %>
+</ul>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+    <%= form.submit %>
+<% end %>
