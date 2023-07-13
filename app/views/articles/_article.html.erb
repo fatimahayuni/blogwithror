@@ -1,0 +1,4 @@
+   <strong><%= article.title %></strong>
+<p><%= article.content %></p>
+<%= link_to "Edit", edit_article_path(article)%>
+<%= button_to "Delete", article, method: :delete %>
